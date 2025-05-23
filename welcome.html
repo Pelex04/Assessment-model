@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Academic Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4A2C2A 0%, #6B4E31 100%);
+            color: #333;
+        }
+        .welcome-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .welcome-container h1 {
+            margin: 0 0 20px;
+            color: #4A2C2A;
+            font-size: 32px;
+        }
+        .welcome-container p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .role-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .student-btn {
+            background: #4A2C2A;
+        }
+        .lecturer-btn {
+            background: #6B4E31;
+        }
+        .role-btn:hover {
+            transform: scale(1.05);
+            filter: brightness(110%);
+        }
+        @media (max-width: 500px) {
+            .welcome-container {
+                padding: 20px;
+                margin: 20px;
+            }
+            .welcome-container h1 {
+                font-size: 24px;
+            }
+            .button-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .role-btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Welcome to the Academic Portal</h1>
+        <p>Please select your role to proceed to the login page.</p>
+        <div class="button-group">
+            <a href="student_page.php" class="role-btn student-btn">Login as Student</a>
+            <a href="lecturer_page.php" class="role-btn lecturer-btn">Login as Lecturer</a>
+        </div>
+    </div>
+</body>
+</html>
